@@ -1,2 +1,3 @@
-select * from {{ source('emp_source', 'employee_records') }}
+SELECT *
+FROM {{ source('emp_source', 'EMPLOYEE_RECORDS') }}
 
