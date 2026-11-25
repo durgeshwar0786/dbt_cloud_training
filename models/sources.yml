@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: emp_source
+    database: BATCH_63_DB
+    schema: BATCH_63_SCHEMA
+    tables:
+      - name: EMPLOYEE_RECORDS
+      - name: DEPARTMENT
