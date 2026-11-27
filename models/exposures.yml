@@ -1,0 +1,18 @@
+
+version: 2
+
+exposures:
+  - name: employee_analytics_dashboard
+    label: Employee Analytics Dashboard
+    type: dashboard
+    maturity: high
+    description: >
+      Power BI dashboard providing employee
+      and department analytics.
+
+    depends_on:
+      - ref('emp_detail')
+
+    owner:
+      name: Data Analytics Team
+      email: corp.dpmishra@gmail.com
