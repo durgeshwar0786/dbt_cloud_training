@@ -2,8 +2,49 @@ version: 2
 
 sources:
   - name: emp_source
+    description: >
+      This source contains raw employee and department
+      information from the BATCH_63 database.
+
     database: BATCH_63_DB
     schema: BATCH_63_SCHEMA
+
     tables:
       - name: EMPLOYEE_RECORDS
+        description: >
+          This table contains raw employee information,
+          including personal details, joining date,
+          salary, address and department identifier.
+
+        columns:
+          - name: EMP_ID
+            description: "Unique identifier assigned to each employee."
+          - name: FNAME
+            description: "First name of the employee."
+          - name: LNAME
+            description: "Last name of the employee."
+          - name: GENDER
+            description: "Gender information of the employee."
+          - name: DOB
+            description: "Date of birth of the employee."
+          - name: DOJ
+            description: "Date on which the employee joined the organization."
+          - name: SALARY
+            description: "Salary of the employee."
+          - name: ADDRESS
+            description: "Residential address of the employee."
+          - name: DEPT_ID
+            description: "Department identifier associated with the employee."
+
       - name: DEPARTMENT
+        description: >
+          This table contains department master information,
+          including department name and joining location.
+
+        columns:
+          - name: DEPT_ID
+            description: "Unique identifier assigned to each department."
+          - name: DEPT_NAME
+            description: "Name of the department."
+          - name: JOINING_LOCATION
+            description: "Location associated with the department joining information."
