@@ -1,0 +1,49 @@
+
+version: 2
+
+models:
+  - name: emp_detail
+    description: "Silver layer model containing employee details joined with department information."
+
+    columns:
+      - name: EMP_ID
+        description: "Employee identifier"
+        data_tests:
+          - not_null
+          - unique
+
+      - name: FNAME
+        description: "Employee first name"
+
+      - name: LNAME
+        description: "Employee last name"
+
+      - name: GENDER
+        description: "Employee gender"
+
+      - name: DOB
+        description: "Employee date of birth"
+
+      - name: DOJ
+        description: "Employee date of joining"
+
+      - name: SALARY
+        description: "Employee salary"
+
+      - name: ADDRESS
+        description: "Employee residential address"
+
+      - name: DEPT_ID
+        description: "Department identifier"
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('raw_department')
+                field: DEPT_ID
+
+      - name: DEPT_NAME
+        description: "Department name"
+
+      - name: JOINING_LOCATION
+        description: "Department joining location"

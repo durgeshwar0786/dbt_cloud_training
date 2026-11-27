@@ -1,0 +1,53 @@
+
+version: 2
+
+models:
+  - name: raw_emp
+    description: "Bronze layer model containing raw employee records."
+
+    columns:
+      - name: EMP_ID
+        description: "Unique employee identifier"
+        data_tests:
+          - not_null
+          - unique
+
+      - name: FNAME
+        description: "Employee first name"
+
+      - name: LNAME
+        description: "Employee last name"
+
+      - name: GENDER
+        description: "Employee gender"
+
+      - name: DOB
+        description: "Employee date of birth"
+
+      - name: DOJ
+        description: "Employee date of joining"
+
+      - name: SALARY
+        description: "Employee salary"
+
+      - name: ADDRESS
+        description: "Employee residential address"
+
+      - name: DEPT_ID
+        description: "Department identifier"
+
+  - name: raw_department
+    description: "Bronze layer model containing raw department records."
+
+    columns:
+      - name: DEPT_ID
+        description: "Unique department identifier"
+        data_tests:
+          - not_null
+          - unique
+
+      - name: DEPT_NAME
+        description: "Department name"
+
+      - name: JOINING_LOCATION
+        description: "Department joining location"
